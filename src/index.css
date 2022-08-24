@@ -3,10 +3,15 @@
 @tailwind utilities;
 
 body {
-    background-color: bisque;
+  background-color: bisque;
 }
+
+.badge {
+  @apply bg-red-700 p-1 text-white
+}
+
 .counter {
-  @apply font-mono text-center text-4xl text-green-400 dark:text-green-400;
+  @apply font-mono text-center text-4xl text-green-400;
 }
 
 .title {

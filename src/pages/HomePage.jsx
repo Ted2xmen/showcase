@@ -1,10 +1,11 @@
-import AppContainer from '../components/AppContainer'
+import AppContainer from '../components/Layout/AppContainer'
+import PageLayout from '../components/Layout/PageLayout'
 
 const HomePage = () => {
   return (
-    <div>
+    <PageLayout>
       <AppContainer />
-    </div>
+    </PageLayout>
   )
 }
 
