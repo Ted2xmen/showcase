@@ -1,22 +1,22 @@
 [
   {
-    "name": "Eleventre",
+    "name": "vue-1",
     "url": "www.eleventree.com",
-    "stack": ["vue", "styled components"]
+    "stack": ["vue", "styled-components"]
   },
   {
-    "name": "Eleventre",
+    "name": "react-1",
     "url": "www.eleventree.com",
-    "stack": ["react", "styled components"]
+    "stack": ["react", "styled-components"]
   },
   {
-    "name": "Eleventre",
+    "name": "svelte-1",
     "url": "www.eleventree.com",
-    "stack": ["svelte", "react", "styled components"]
+    "stack": ["svelte", "vue", "tailwind-css"]
   },
   {
-    "name": "Eleventre",
+    "name": "next-1",
     "url": "www.eleventree.com",
-    "stack": ["next", "react", "styled components"]
+    "stack": ["next-js", "react", "styled-components"]
   }
 ]

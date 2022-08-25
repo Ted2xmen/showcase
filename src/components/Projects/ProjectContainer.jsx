@@ -1,20 +1,23 @@
 import React from 'react'
-import projects from '../../data/projects'
+// import projects from '../../data/projects'
 import ProjectCard from './ProjectCard'
-import { useSelector } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
+// import { setFilteredProjects, filteredProjects } from '../../redux/main'
 
 const ProjectContainer = () => {
-  const kelime = useSelector((state) => state.main.kelime)
+  const projects = useSelector((state) => state.main.projects)
+  const tech = useSelector((state) => state.main.tech)
+  const style = useSelector((state) => state.main.style)
 
   return (
-    <div>
-      main store {kelime}
-      <ul>
-        {projects.map((project, i) => {
+    <ul>
+      {projects
+        ?.filter((e) => e.stack.find((s) => s.includes(tech)))
+        .filter((e) => e.stack.find((s) => s.includes(style)))
+        .map((project, i) => {
           return <ProjectCard key={i} project={project} />
         })}
-      </ul>
-    </div>
+    </ul>
   )
 }
 

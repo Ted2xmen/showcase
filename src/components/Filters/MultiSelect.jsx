@@ -1,17 +1,21 @@
 import React, { useState } from 'react'
 import Select from 'react-select'
+import { useSelector, useDispatch } from 'react-redux'
+import { setTech, setStyle } from '../../redux/main'
 
 // delete react-select
 
 const MultiSelect = () => {
-  const [option, setOption] = React.useState(null)
+  const dispatch = useDispatch()
 
   const handleTechOption = (e) => {
-    console.log(e.target.value)
+    console.log('multiselect', e.target.value)
+    dispatch(setTech(e.target.value))
   }
 
   const handleStyleOption = (e) => {
     console.log(e.target.value)
+    dispatch(setStyle(e.target.value))
   }
 
   return (
@@ -26,9 +30,8 @@ const MultiSelect = () => {
           id="tech">
           <option value="all">All</option>
           <option value="vue">Vue</option>
-
           <option value="react">React</option>
-          <option value="next">Next JS</option>
+          <option value="next-js">Next JS</option>
         </select>
       </div>
 
@@ -41,10 +44,10 @@ const MultiSelect = () => {
           className="badge p-2 px-4"
           id="styling">
           <option value="all">All</option>
-          <option value="tailwindcss">Tailwind CSS</option>
-          <option value="styledcomponents">Styled Components</option>
+          <option value="tailwind-css">Tailwind CSS</option>
+          <option value="styled-components">Styled Components</option>
           <option value="bootstrap">Bootstrap</option>
-          <option value="materialui">Material UI</option>
+          <option value="material-ui">Material UI</option>
         </select>
       </div>
     </div>
