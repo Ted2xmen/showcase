@@ -3,6 +3,8 @@ import Select from 'react-select'
 import { useSelector, useDispatch } from 'react-redux'
 import { setTech, setStyle } from '../../redux/main'
 
+import { Trans } from 'react-i18next'
+
 // delete react-select
 
 const MultiSelect = () => {
@@ -28,8 +30,9 @@ const MultiSelect = () => {
       </div>
       <div>
         <label className="mr-2" htmlFor="tech">
-          Tech Stack:
+          <Trans i18nKey="site.techstack">Tech Stack</Trans>
         </label>
+
         <select
           onChange={handleTechOption}
           className="badge p-2 px-4"
@@ -43,8 +46,9 @@ const MultiSelect = () => {
 
       <div>
         <label className="mr-2" htmlFor="styling">
-          Styling:
+          <Trans i18nKey="site.styling">Styling</Trans>
         </label>
+
         <select
           onChange={handleStyleOption}
           className="badge p-2 px-4"
