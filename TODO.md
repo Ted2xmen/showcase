@@ -2,3 +2,5 @@
 [] add svg icons
 [] fixes for projects.filter()
 [] fix image - path
+
+[] add typescript 

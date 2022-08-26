@@ -3,17 +3,16 @@ import { useSelector, useDispatch } from 'react-redux'
 import { setSearch } from '../../redux/main'
 
 const Search = () => {
-  const string = useSelector((state) => state.main.string)
   const dispatch = useDispatch()
   return (
-    <div className="flex items-center justify-center">
+    <div className="my-5 flex items-center justify-center">
       <input
         onChange={(e) => {
-          dispatch(setSearch(e.target.value))
+          dispatch(setSearch(e.target.value.toLowerCase()))
         }}
-        className="p-3 px-6"
+        className="border-2 border-green-600 bg-slate-800 p-3 px-6"
         type="text"
-        placeholder="search projects"
+        placeholder="Search"
       />
     </div>
   )

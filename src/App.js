@@ -1,7 +1,9 @@
 import { Routes, Route } from 'react-router-dom'
 // Pages
-import AboutPage from './pages/AboutPage';
-import HomePage from './pages/HomePage';
+import ContactPage from './pages/ContactPage'
+
+import AboutPage from './pages/AboutPage'
+import HomePage from './pages/HomePage'
 
 function App() {
   return (
@@ -9,6 +11,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="about" element={<AboutPage />} />
+        <Route path="contact" element={<ContactPage />} />
       </Routes>
     </div>
   )

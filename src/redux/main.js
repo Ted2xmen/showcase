@@ -12,11 +12,10 @@ export const mainSlice = createSlice({
     projects: projects,
     filteredProjects: [],
     githubData: [],
-    githubExample: 'data from reduxtk',
   },
   reducers: {
     setSearch: (state, action) => {
-      state.tech = action.payload
+      state.string = action.payload
     },
     setTech(state, action) {
       state.tech = action.payload
