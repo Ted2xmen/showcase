@@ -20,6 +20,12 @@ const MultiSelect = () => {
 
   return (
     <div className="flex items-center justify-center space-x-5 py-4">
+      <div className="hidden">
+        <input type="checkbox" name="typescript" id="typescript" />
+        <label className="ml-1" htmlFor="typescript">
+          TypeScript
+        </label>
+      </div>
       <div>
         <label className="mr-2" htmlFor="tech">
           Tech Stack:

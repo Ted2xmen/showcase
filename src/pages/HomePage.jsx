@@ -12,9 +12,6 @@ const HomePage = () => {
 
   return (
     <PageLayout>
-      <div className="p-10 text-white shadow shadow-green-400">
-        Home : from store: {tech} - {style} -- search : {string}
-      </div>
       <AppContainer />
     </PageLayout>
   )

@@ -10,7 +10,7 @@ const Search = () => {
         onChange={(e) => {
           dispatch(setSearch(e.target.value.toLowerCase()))
         }}
-        className="border-2 border-green-600 bg-slate-800 p-3 px-6"
+        className="rounded-lg border-2 border-border  bg-slate-800 p-3 px-6 shadow-lg"
         type="text"
         placeholder="Search"
       />

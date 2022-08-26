@@ -3,11 +3,11 @@
 @tailwind utilities;
 
 body {
-  @apply bg-gray-900 text-gray-400
+  @apply bg-background text-main
 }
 
 .badge {
-  @apply bg-red-700 p-1 text-white
+  @apply bg-[#D4ECDD] p-1 text-background rounded-sm shadow-lg
 }
 
 .counter {
@@ -20,4 +20,8 @@ body {
 
 .gradient {
   @apply rounded-lg bg-gradient-to-r from-slate-600 via-slate-700 to-slate-800 shadow-lg;
+}
+
+.project-title {
+  @apply mr-4 bg-main hover:bg-background px-1 text-lg font-bold hover:text-main text-background shadow-lg transition-all
 }

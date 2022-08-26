@@ -16,20 +16,26 @@ const GithubCard = () => {
 
   return (
     <div>
-      <div className="flex flex-col bg-green-900 p-10">
-        <h2> {user.name}</h2>
-        <p> {user.bio} </p>
-        <h3> {user.blog} </h3>
-        {/* <img src={user.avatar_url} width="200px" alt="" /> */}
-        <h3> {user.followers} </h3>
-        <h3> {user.following} </h3>
-        <h3> {user.html_url} </h3>
-        <h3> {user.location} </h3>
-        <h3> {user.hireable ? 'true' : 'false'} </h3>
-        <h3> {user.public} </h3>
+      <div className="flex flex-row justify-center">
+        <div className="h-12 w-12 flex-1 bg-red-300"></div>
+        <div className="h-12 w-12 flex-1 bg-green-300"></div>
+        <div className="h-12 w-12 flex-1  bg-yellow-300"></div>
+        <div className="h-12 w-12  bg-green-600">True</div>
       </div>
     </div>
   )
 }
 
 export default GithubCard
+
+// <div className="flex flex-col ">
+//       <h2> {user.name}</h2>
+//       <p> {user.bio} </p>
+//       <h3> {user.blog} </h3>
+//       <h3> {user.followers} </h3>
+//       <h3> {user.following} </h3>
+//       <h3> {user.html_url} </h3>
+//       <h3> {user.location} </h3>
+//       <h3> {user.hireable ? 'true' : 'false'} </h3>
+//       <h3> {user.public} </h3>
+//     </div>

@@ -6,6 +6,9 @@ module.exports = {
     },
     extend: {
       colors: {
+        main: "#D4ECDD",
+        border: "#345B63",
+        background: "#112031",
         primary: "#f2ff00",
       },
       screens: {
