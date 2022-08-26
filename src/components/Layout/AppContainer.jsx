@@ -3,7 +3,7 @@ import ProjectContainer from '../Projects/ProjectContainer'
 
 const AppContainer = () => {
   return (
-    <div className="bg-green-400">
+    <div>
       <Container />
       <ProjectContainer />
     </div>

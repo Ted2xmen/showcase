@@ -11,12 +11,14 @@ const ProjectContainer = () => {
 
   return (
     <ul>
-      {projects
-        ?.filter((e) => e.stack.find((s) => s.includes(tech)))
-        .filter((e) => e.stack.find((s) => s.includes(style)))
-        .map((project, i) => {
-          return <ProjectCard key={i} project={project} />
-        })}
+      {tech === 'all'
+        ? projects
+        : projects
+            ?.filter((e) => e.stack.find((s) => s.includes(tech ?? style)))
+            ?.filter((e) => e.stack.find((s) => s.includes(style)))
+            ?.map((project, i) => {
+              return <ProjectCard key={i} project={project} />
+            })}
     </ul>
   )
 }

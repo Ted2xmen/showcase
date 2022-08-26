@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  background-color: bisque;
+  @apply bg-gray-900 text-gray-400
 }
 
 .badge {

@@ -1,22 +1,34 @@
 [
   {
-    "name": "vue-1",
+    "name": "Arastirman",
     "url": "www.eleventree.com",
-    "stack": ["vue", "styled-components"]
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    "stack": ["vue", "tailwind-css"],
+    "ts": true,
+    "image": "../../../assets/eleventree.png"
   },
   {
-    "name": "react-1",
+    "name": "react-airtable",
     "url": "www.eleventree.com",
-    "stack": ["react", "styled-components"]
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    "stack": ["react", "styled-components"],
+    "ts": false,
+    "image": "../../../assets/eleventree.png"
   },
   {
-    "name": "svelte-1",
+    "name": "kronika",
     "url": "www.eleventree.com",
-    "stack": ["svelte", "vue", "tailwind-css"]
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    "stack": ["vue", "bootstrap"],
+    "ts": true,
+    "image": "../../../assets/eleventree.png"
   },
   {
-    "name": "next-1",
+    "name": "react-movie-app",
     "url": "www.eleventree.com",
-    "stack": ["next-js", "react", "styled-components"]
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    "stack": ["react", "tailwind-css"],
+    "ts": false,
+    "image": "../../../assets/eleventree.png"
   }
 ]

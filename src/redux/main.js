@@ -1,6 +1,8 @@
 import { createSlice } from '@reduxjs/toolkit'
 import projects from '../data/projects.json'
 
+// Thunks are typically written in "slice" files. createSlice itself does not have any special support for defining thunks, so you should write them as separate functions in the same slice file. That way, they have access to the plain action creators for that slice, and it's easy to find where the thunk lives.
+
 export const mainSlice = createSlice({
   name: 'main',
   initialState: {
@@ -9,6 +11,8 @@ export const mainSlice = createSlice({
     string: '',
     projects: projects,
     filteredProjects: [],
+    githubData: [],
+    githubExample: 'data from reduxtk',
   },
   reducers: {
     setSearch: (state, action) => {
@@ -23,7 +27,7 @@ export const mainSlice = createSlice({
   },
 })
 
-export default mainSlice.reducer
+export default mainSlice.reducer // for store.js
 
 export const {
   setTech,
@@ -31,4 +35,4 @@ export const {
   setStyle,
   filteredProjects,
   setFilteredProjects,
-} = mainSlice.actions
+} = mainSlice.actions // for components

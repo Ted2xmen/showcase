@@ -11,7 +11,7 @@ const HomePage = () => {
 
   return (
     <PageLayout>
-      <div className="bg-orange-900 p-10 text-white">
+      <div className="p-10 text-white shadow shadow-green-400">
         Home : from store: {tech} - {style}
       </div>
       <AppContainer />
