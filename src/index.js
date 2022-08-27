@@ -10,6 +10,10 @@ import { store } from './redux/store'
 
 import './i18n'
 
+import { getData } from './redux/main'
+
+store.dispatch(getData())
+
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
   // <React.StrictMode>
