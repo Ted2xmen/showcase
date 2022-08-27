@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import { useSelector } from 'react-redux'
 
 const GithubCard = () => {
   const [user, setUser] = useState([])
@@ -8,7 +7,6 @@ const GithubCard = () => {
     const getData = async () => {
       const response = await fetch('https://api.github.com/users/ted2xmen')
       const data = await response.json()
-      console.log(data)
       setUser(data)
     }
     getData()
@@ -16,11 +14,19 @@ const GithubCard = () => {
 
   return (
     <div>
-      <div className="flex flex-row justify-center">
-        <div className="h-12 w-12 flex-1 bg-red-300"></div>
-        <div className="h-12 w-12 flex-1 bg-green-300"></div>
-        <div className="h-12 w-12 flex-1  bg-yellow-300"></div>
-        <div className="h-12 w-12  bg-green-600">True</div>
+      <div className="m-3 flex flex-row flex-wrap justify-between">
+        <div className="flex flex-col">
+          <h1 className="bottom-26 relative text-5xl"> {user.name}</h1>
+          <h2 className="ml-3 mt-3"> {user.bio} </h2>
+          <h3 className="ml-2 mt-3">📍 {user.location} </h3>
+        </div>
+        <div className="m-2 flex-col items-center space-y-4 text-sm">
+          <h3> Followers: {user.followers} </h3>
+          <h3> Following: {user.following} </h3>
+          <button className=" badge" href={user.html_url}>
+            Github
+          </button>
+        </div>
       </div>
     </div>
   )

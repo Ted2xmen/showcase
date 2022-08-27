@@ -3,7 +3,7 @@ import GithubCard from './GithubCard'
 
 const HeroSection = () => {
   return (
-    <div className="mx-auto mt-4 max-w-4xl p-2">
+    <div className="mx-auto mt-10 rounded-lg bg-slate-800 p-12">
       <GithubCard />
     </div>
   )

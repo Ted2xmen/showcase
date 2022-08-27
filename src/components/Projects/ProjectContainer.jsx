@@ -10,7 +10,6 @@ const ProjectContainer = () => {
   const string = useSelector((state) => state.main.string)
 
   const [parent] = useAutoAnimate(/* optional config */)
-
   return (
     <ul ref={parent}>
       {tech === 'all'
