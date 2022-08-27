@@ -4,19 +4,21 @@ import { useSelector } from 'react-redux'
 import { useAutoAnimate } from '@formkit/auto-animate/react'
 
 const ProjectContainer = () => {
-  const projects = useSelector((state) => state.main.projects)
+  const portfolio = useSelector((state) => state.main.portfolio)
+
   const tech = useSelector((state) => state.main.tech)
-  const style = useSelector((state) => state.main.style)
   const string = useSelector((state) => state.main.string)
 
   const [parent] = useAutoAnimate(/* optional config */)
+
   return (
     <ul ref={parent}>
       {tech === 'all'
-        ? projects?.filter((p) => p.name.toLowerCase().includes(string))
-        : projects
-            ?.filter((e) => e.stack.find((s) => s.includes(tech ?? style)))
-            ?.filter((e) => e.stack.find((s) => s.includes(style)))
+        ? portfolio?.filter((p) => p.name.toLowerCase().includes(string))
+        : portfolio
+            // ?.filter((e) => e.stack.find((s) => s.includes(tech ?? style)))
+            // ?.filter((e) => e.stack.find((s) => s.includes(style)))
+            ?.filter((f) => f.topics.includes('portfolio'))
             ?.filter((p) => p.name.toLowerCase().includes(string))
             ?.map((project, i) => {
               return <ProjectCard key={i} project={project} />

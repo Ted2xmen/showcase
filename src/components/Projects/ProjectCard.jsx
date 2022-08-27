@@ -1,53 +1,74 @@
 import React from 'react'
 import {
-  VueIcon,
-  ReactIcon,
   JavaScriptIcon,
   TypeScriptIcon,
-  BootstrapIcon,
+  GithubSvg,
+  Arrow,
 } from './ProjectIcons'
 
 const ProjectCard = ({ project }) => {
-  const stackIcon = project.stack.map((st, i) => {
+  const tagCloud = project.topics.map((st, i) => {
     return (
-      <span key={i}>
-        {st === 'vue' ? (
-          <VueIcon />
-        ) : st && st === 'react' ? (
-          <ReactIcon />
-        ) : st && st === 'bootstrap' ? (
-          <BootstrapIcon />
-        ) : (
-          st
-        )}
+      <span
+        className="rounded-lg bg-red-900 p-1 text-xs font-thin text-main"
+        key={i}>
+        {st}
       </span>
     )
   })
 
   return (
-    <li className="m-5 flex flex-row rounded-lg border-2 border-border p-1 shadow-xl">
-      <img
-        src="https://www.ted2xmen.dev/_next/image?url=%2Fstatic%2Feleventree.png&w=1200&q=75"
-        className="w-48 object-cover"
-        alt="eleventree scr"
-      />
-      <div className="flex flex-col">
-        <div className="m-4 flex items-center">
-          <span className="mr-3">
-            {project.ts ? <TypeScriptIcon /> : <JavaScriptIcon />}{' '}
-          </span>
-          <h3 className="project-title">{project.name}</h3>
-          <div className="text-end space-x-2 text-xs">
-            <button>Github</button> <button>Preview</button>
+    <article className="my-8 rounded-lg border-2 border-slate-700 bg-slate-800 p-4 shadow-sm hover:border-slate-900">
+      <div className="flex items-start p-5">
+        <a href={project.html_url}>
+          <GithubSvg />
+        </a>
+
+        <div className="ml-5">
+          <div className="flex items-center justify-start space-x-4 font-medium sm:text-lg">
+            <a href={project.html_url}>
+              <h3 className="project-title">{project.name}</h3>
+            </a>
+            <span className="mr-3">
+              {(project.language === 'JavaScript' && <JavaScriptIcon />) ||
+                (project.language === 'TypeScript' && <TypeScriptIcon />) ||
+                (project.language && (
+                  <span className="text-xs text-slate-500">
+                    {project.language}
+                  </span>
+                ))}
+            </span>
+
+            <p className="items-end">
+              {project.stargazers_count > 0
+                ? '⭐ ' + project.stargazers_count
+                : null}
+            </p>
+            <a
+              href={project.homepage}
+              className="flex items-start text-sm hover:text-red-700">
+              Preview <Arrow />
+            </a>
+          </div>
+          <div className="mt-4 h-32 w-full overflow-auto rounded-lg bg-slate-700 p-2 shadow-xl ">
+            <p className="mt-2 text-sm text-gray-300">
+              {project.description} Lorem ipsum, dolor sit amet consectetur
+              adipisicing elit. Aspernatur nemo sed cum minus autem perspi
+            </p>
+          </div>
+
+          <div className="mt-2 sm:flex sm:items-center sm:gap-2">
+            <div className="flex items-center justify-between text-gray-500">
+              <div className="space-x-4">{tagCloud}</div>
+              <div className="text-xs font-thin">
+                <p>{project.license?.name}</p>
+                <p>{project.created_at}</p>
+              </div>
+            </div>
           </div>
         </div>
-        <div className="m-6 text-sm"> {project.description} </div>
-        <div className="m-6 flex items-center justify-end space-x-3 ">
-          {stackIcon}
-          {/* <p>{project.category}</p> */}
-        </div>
       </div>
-    </li>
+    </article>
   )
 }
 

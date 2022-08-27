@@ -10,9 +10,11 @@ import { store } from './redux/store'
 
 import './i18n'
 
-import { getData } from './redux/main'
+import { getStarred, getPortfolio } from './redux/main'
 
-store.dispatch(getData())
+store.dispatch(getStarred())
+
+store.dispatch(getPortfolio())
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
