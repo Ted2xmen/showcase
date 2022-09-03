@@ -49,6 +49,8 @@ const ProjectCard = ({ project }) => {
             <Stargazer />
             <a
               href={project.homepage}
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex items-start text-sm hover:text-red-700">
               Preview <Arrow />
             </a>
