@@ -14,14 +14,14 @@ const GithubCard = () => {
   }, [])
 
   return (
-    <div className="flex items-center justify-between sm:flex-col md:flex-col ">
+    <div className="flex flex-col items-center justify-between sm:flex-col md:flex-row lg:flex-row xl:flex-row ">
       <div className="flex flex-col">
         <h1 className="bottom-26 relative text-5xl"> {user.name}</h1>
         <h2 className="ml-3 mt-3"> {user.bio} </h2>
         <h3 className="ml-2 mt-3">📍 {user.location} </h3>
       </div>
 
-      <div className="m-2 flex-col items-center space-y-4 text-sm">
+      <div className="m-2 mt-4 flex-col items-center space-y-4 text-sm">
         <h3> Followers: {user.followers} </h3>
         <h3> Following: {user.following} </h3>
         <a

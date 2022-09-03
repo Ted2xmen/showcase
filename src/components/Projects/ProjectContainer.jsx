@@ -20,6 +20,7 @@ const ProjectContainer = () => {
             // ?.filter((e) => e.stack.find((s) => s.includes(style)))
             ?.filter((f) => f.topics.includes('portfolio'))
             ?.filter((p) => p.name.toLowerCase().includes(string))
+
             ?.map((project, i) => {
               return <ProjectCard key={i} project={project} />
             })}

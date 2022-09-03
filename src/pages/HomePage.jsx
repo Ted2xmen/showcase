@@ -5,7 +5,7 @@ const HomePage = () => {
   return (
     <div className="flex flex-col">
       <Nav />
-      <div className="mx-auto max-w-4xl sm:max-w-2xl sm:bg-yellow-400">
+      <div className="mx-auto max-w-4xl sm:max-w-2xl ">
         <AppContainer />
       </div>
     </div>
