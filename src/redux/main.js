@@ -1,11 +1,12 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
 import axios from 'axios'
 
+// Thunks are typically written in "slice" files. createSlice itself does not have any special support for defining thunks, so you should write them as separate functions in the same slice file. That way, they have access to the plain action creators for that slice, and it's easy to find where the thunk lives.
+
 const API_URL = 'https://api.github.com/users/Ted2xmen/starred'
 const PROJECTS_URL =
   'https://api.github.com/users/ted2xmen/repos?per_page=100&page=1'
 
-// Thunks are typically written in "slice" files. createSlice itself does not have any special support for defining thunks, so you should write them as separate functions in the same slice file. That way, they have access to the plain action creators for that slice, and it's easy to find where the thunk lives.
 export const getPortfolio = createAsyncThunk('main/getPortfolio', async () => {
   try {
     const response = await axios.get(PROJECTS_URL)

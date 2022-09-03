@@ -17,7 +17,7 @@ const Nav = () => {
   }
 
   return (
-    <div className="container-md flex flex-row items-center justify-between px-10 py-14">
+    <div className="mb-5 flex flex-row items-center justify-between bg-slate-800 px-10 py-6">
       <style>
         {`
         h1 {
@@ -32,14 +32,8 @@ const Nav = () => {
         <Link to="/">
           <Trans i18nKey="site.home">Home</Trans>
         </Link>
-        <Link to="/about">
-          <Trans i18nKey="site.about">About</Trans>
-        </Link>
-        <Link to="/contact">
-          <Trans i18nKey="site.contact">Contact</Trans>
-        </Link>
       </div>
-      <div className="space-x-6">
+      <div className="hidden space-x-6 sm:block md:block lg:block xl:block 2xl:block">
         <label className="text-xs" htmlFor="font">
           <Trans i18nKey="site.font">Change Fonts</Trans>
         </label>

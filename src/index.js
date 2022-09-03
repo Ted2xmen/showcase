@@ -12,7 +12,7 @@ import './i18n'
 
 import { getStarred, getPortfolio } from './redux/main'
 
-store.dispatch(getStarred())
+store.dispatch(getStarred()) 
 
 store.dispatch(getPortfolio())
 

@@ -1,10 +1,12 @@
-import Container from '../Filters/Container'
+import Search from '../Filters/Search'
 import ProjectContainer from '../Projects/ProjectContainer'
+import HeroSection from './HeroSection'
 
 const AppContainer = () => {
   return (
     <div>
-      <Container />
+      <HeroSection /> 
+      <Search />
       <ProjectContainer />
     </div>
   )
